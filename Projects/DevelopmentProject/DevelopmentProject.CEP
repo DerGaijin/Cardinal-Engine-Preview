@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<Project>
+	<Name>DevelopmentProject</Name>
+	<Binaries>
+		<Debug>/../../Bin/windows/Debug-Editor - x86_64/</Debug>
+		<Release>/../../Bin/windows/Release-Editor - x86_64/</Release>
+	</Binaries>
+</Project>

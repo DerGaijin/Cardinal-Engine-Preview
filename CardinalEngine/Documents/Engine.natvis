@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+	<Type Name="CE::Array&lt;*&gt;">
+		<DisplayString>{{ Size={m_Size} }}</DisplayString>
+		<Expand>
+			<Item Name="[Size]" ExcludeView="simple">m_Size</Item>
+			<Item Name="[Capacity]" ExcludeView="simple">m_Reserved</Item>
+			<ArrayItems>
+				<Size>m_Size</Size>
+				<ValuePointer>m_Data</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+
+	<Type Name="CE::BasicString&lt;*,*&gt;">
+		<DisplayString Condition="m_Size &lt; SmallBuffSize">{m_Small,na}</DisplayString>
+		<DisplayString Condition="m_Size &gt;= SmallBuffSize">{m_Data,na}</DisplayString>
+		<Expand>
+			<Item Name="[Size]" ExcludeView="simple">m_Size</Item>
+			<Item Name="[Capacity]" ExcludeView="simple">m_Reserved</Item>
+			<ArrayItems>
+				<Size>m_Size</Size>
+				<ValuePointer Condition="m_Size &lt; SmallBuffSize">m_Small</ValuePointer>
+				<ValuePointer Condition="m_Size &gt;= SmallBuffSize">m_Data</ValuePointer>
+			</ArrayItems>
+		</Expand>
+	</Type>
+
+</AutoVisualizer>

@@ -1,0 +1,26 @@
+#Visual Studio Stuff
+/.vs/
+
+# Binaries
+/Bin/
+/Bin-int/
+
+# Thirdparty
+/Thirdparty/
+
+# Resources
+/CardinalEngine - Resources/
+/CardinalEngine-Editor - Resources/Assets/
+/CardinalEngine-Editor - Resources/Source/
+
+# Python Cache
+/Build Scripts/__pycache__/
+
+# Visual Studio Solution Files
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+# Engine Specific
+/CardinalEngine-Editor - Work Directory/Logs/
